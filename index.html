@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lição da Escola Sabatina</title>
+
+    <meta name="theme-color" content="#d63384">
+
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icone1.png">
+<link rel="apple-touch-icon" href="icone1.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <header class="cabecalho">
+
+           <div class="mensagem-boas-vindas">
+    🌷 Deus abençoe seu estudo de hoje
+</div>
+
+<div class="subtitulo-app">
+    Seu momento diário com Deus
+</div>
+
+            <p id="data-hoje"></p>
+
+            <h1 id="titulo-trimestre">
+                Buscando Lição...
+            </h1>
+
+            <p id="data-trimestre">
+                Carregando dados da internet...
+            </p>
+
+        </header>
+
+        <nav class="menu-dias">
+
+            <button class="btn-dia" onclick="mudarDia(0)">
+                Sáb
+            </button>
+
+            <button class="btn-dia" onclick="mudarDia(1)">
+                Dom
+            </button>
+
+            <button class="btn-dia" onclick="mudarDia(2)">
+                Seg
+            </button>
+
+            <button class="btn-dia" onclick="mudarDia(3)">
+                Ter
+            </button>
+
+            <button class="btn-dia" onclick="mudarDia(4)">
+                Qua
+            </button>
+
+            <button class="btn-dia" onclick="mudarDia(5)">
+                Qui
+            </button>
+
+            <button class="btn-dia" onclick="mudarDia(6)">
+                Sex
+            </button>
+
+        </nav>
+
+        <main class="conteudo-licao">
+
+            <section class="card-licao">
+
+    <div class="capa-container">
+        <img id="capa-licao" src="" alt="Capa da Lição">
+    </div>
+
+    <h2 id="titulo-do-dia">
+        Carregando o dia...
+    </h2>
+
+    <div id="texto-do-dia"></div>
+
+</section>
+
+        </main>
+
+        <footer class="rodape">
+            Escola Sabatina • Feito com ❤️ para Mamãe
+        </footer>
+
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+
+<script>
+if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("sw.js");
+}
+</script>
+
+</html>
